@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tentang Gerakan Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025.">
+  <title>Tentang Kami | AKSANG GD'25</title>
+
+  <style>
+    :root {
+      --primary: #3b2a1f;
+      --primary-dark: #241a13;
+      --earth: #c1622c;
+      --earth-hover: #a14e22;
+      --botanical: #8a7a63;
+      --crack: #241a13;
+      --background: #f7f3ee;
+      --surface-glass: rgba(255, 252, 248, 0.82);
+      --surface-glass-dark: rgba(59, 42, 31, 0.88);
+      --text-primary: #2a211a;
+      --text-muted: #6b5d4f;
+      --white: #ffffff;
+      --border: rgba(59, 42, 31, 0.12);
+      --shadow: 0 8px 30px rgba(36, 26, 19, 0.1);
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --header-height: 76px;
+      --content-width: 1200px;
+      --transition: 0.3s ease;
+    }
+
+    [data-theme="dark"] {
+      --primary: #17110c;
+      --primary-dark: #0c0908;
+      --earth: #e08544;
+      --earth-hover: #f0975a;
+      --botanical: #a99a85;
+      --crack: #000000;
+      --background: #1c1611;
+      --surface-glass: rgba(38, 30, 24, 0.82);
+      --surface-glass-dark: rgba(12, 9, 8, 0.88);
+      --text-primary: #f1e9df;
+      --text-muted: #b8a996;
+      --white: #f5efe7;
+      --border: rgba(241, 233, 223, 0.12);
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
+    }
+
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--background);
+      color: var(--text-primary);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Pemisahan transition untuk warna agar tidak menimpa animasi reveal */
+    body, .site-header, .glass-card, .visi-card, .misi-card, .org-card-simple, .site-footer, .theme-toggle,
+    .img-placeholder, .aksi-watermark, .logo-large-placeholder, .filo-icon-placeholder {
+      transition-property: background-color, color, border-color, box-shadow;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--content-width));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .section-heading p {
+      color: var(--text-muted);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      color: var(--earth);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      background: var(--surface-glass-dark);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 9px;
+      background: rgba(255,255,255,.06);
+      color: var(--earth);
+    }
+
+    .brand-logo::after {
+      content: "A";
+      font-size: .85rem;
+      font-weight: 900;
+    }
+
+    .brand-text {
+      white-space: nowrap;
+    }
+
+    .brand-accent {
+      color: var(--earth);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 10px;
+      color: rgba(255,255,255,.88);
+      font-size: .88rem;
+      font-weight: 650;
+      transition: color var(--transition);
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 10px;
+      bottom: 2px;
+      left: 10px;
+      height: 2px;
+      content: "";
+      background: var(--earth);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.active {
+      color: var(--white);
+    }
+
+    .nav-link.active {
+      color: var(--earth);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .theme-toggle {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(255,255,255,.14);
+    }
+
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .theme-toggle .icon-sun {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun {
+      display: block;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-moon {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 10px;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .hamburger {
+      position: relative;
+      width: 22px;
+      height: 16px;
+    }
+
+    .hamburger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    .hamburger span:nth-child(1) { top: 0; }
+    .hamburger span:nth-child(2) { top: 7px; }
+    .hamburger span:nth-child(3) { top: 14px; }
+
+    .menu-toggle.active .hamburger span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .menu-toggle.active .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active .hamburger span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* =========================
+       PAGE HERO
+    ========================== */
+    .page-hero {
+      position: relative;
+      min-height: 45vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 130px 0 70px;
+      background: linear-gradient(135deg, #241a13 0%, #4a3423 100%);
+      color: var(--white);
+    }
+
+    .page-hero::before,
+    .page-hero::after {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .page-hero::before {
+      width: 560px;
+      height: 560px;
+      top: -300px;
+      right: -120px;
+    }
+
+    .page-hero::after {
+      width: 430px;
+      height: 430px;
+      bottom: -300px;
+      left: -160px;
+    }
+
+    .page-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 999px;
+      background: rgba(138,122,99,.18);
+      color: #dce7da;
+      font-size: .85rem;
+      font-weight: 750;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-badge::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--earth);
+      content: "";
+    }
+
+    .page-hero h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -.055em;
+      line-height: 1;
+    }
+
+    .page-hero p {
+      max-width: 700px;
+      color: rgba(255,255,255,.72);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    /* =========================
+       LATAR BELAKANG (FLOAT LAYOUT)
+    ========================== */
+    .background-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--background);
+    }
+
+    .crack-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: .08;
+      pointer-events: none;
+    }
+    .crack-overlay svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .background-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .background-content h2 {
+      margin-bottom: 26px;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .text-wrapper {
+      position: relative;
+    }
+
+    /* Membuat gambar mengapung di sisi kanan, teks akan mengisi sisi kirinya dan mengalir ke bawah */
+    .img-placeholder {
+      float: right;
+      width: 45%;
+      max-width: 420px;
+      aspect-ratio: 4/3;
+      margin: 0 0 24px 32px;
+      background: var(--border);
+      border: 2px dashed rgba(193, 98, 44, 0.4);
+      border-radius: var(--radius-lg);
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .text-wrapper p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .problem-box {
+      clear: both; /* Memastikan problem box selalu berada di bawah elemen float jika gambar lebih panjang */
+      margin-top: 32px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--earth);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      background: rgba(193,98,44,.08);
+    }
+
+    .problem-box h3 {
+      margin-bottom: 9px;
+      color: var(--primary);
+      font-size: 1.15rem;
+    }
+
+    .problem-box p {
+      margin-bottom: 0;
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       TENTANG AKSI
+    ========================== */
+    .aksi-section {
+      background: var(--primary);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aksi-watermark {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(250px, 40vw, 450px);
+      aspect-ratio: 1/1;
+      background: rgba(255, 255, 255, 0.04);
+      border: 4px dashed rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .aksi-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aksi-label {
+      color: var(--earth);
+    }
+
+    .aksi-grid h2 {
+      margin-top: 8px;
+      color: var(--white);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .aksi-copy {
+      display: grid;
+      gap: 20px;
+    }
+
+    .aksi-copy p {
+      color: rgba(255,255,255,.75);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    /* =========================
+       FILOSOFI LOGO
+    ========================== */
+    .filosofi-section {
+      background: var(--surface-glass);
+    }
+
+    [data-theme="dark"] .filosofi-section {
+      background: #19120e;
+    }
+
+    .filosofi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .logo-large-placeholder {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: var(--border);
+      border-radius: var(--radius-lg);
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 2px dashed rgba(193, 98, 44, 0.3);
+    }
+
+    .filosofi-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .filo-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .filo-icon-placeholder {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+      background: var(--border);
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      font-weight: 700;
+      border: 1px dashed rgba(193, 98, 44, 0.4);
+    }
+
+    .filo-text h4 {
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .filo-text p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       VISI MISI
+    ========================== */
+    .visi-misi-section {
+      background: var(--background);
+    }
+
+    .visi-misi-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .visi-card, .misi-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .visi-card {
+      position: relative;
+      padding: 45px 30px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .visi-card::after {
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 250px;
+      height: 250px;
+      border: 40px solid rgba(193,98,44,.05);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .card-label {
+      margin-bottom: 15px;
+      color: var(--earth);
+      font-size: .85rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .visi-card h3 {
+      margin-bottom: 18px;
+      color: var(--primary);
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+    }
+
+    .visi-card p {
+      position: relative;
+      z-index: 1;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .misi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .misi-card {
+      padding: 30px 24px;
+    }
+
+    .misi-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 10px;
+      background: rgba(193,98,44,.12);
+      color: var(--earth);
+      font-size: .9rem;
+      font-weight: 900;
+    }
+
+    .misi-card h4 {
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .misi-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       ORGANOGRAM (SIMPLE FLEX GRID)
+    ========================== */
+    .organogram-section {
+      position: relative;
+      background: #eee7dd;
+    }
+
+    [data-theme="dark"] .organogram-section {
+      background: #211811;
+    }
+
+    .org-wrapper-simple {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .org-group-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .org-card-simple {
+      flex: 1 1 200px;
+      max-width: 250px;
+      padding: 20px 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 14px rgba(36,26,19,.05);
+      text-align: center;
+    }
+
+    .org-card-simple:hover {
+      border-color: rgba(193,98,44,.4);
+      box-shadow: 0 8px 24px rgba(36,26,19,.1);
+      transform: translateY(-3px);
+    }
+
+    .org-card-simple.tier-1 {
+      border: 2px solid var(--earth);
+      max-width: 320px;
+      padding: 26px 36px;
+    }
+
+    .org-card-simple.tier-2 {
+      border: 2px solid rgba(193,98,44,.4);
+      max-width: 280px;
+    }
+
+    .org-position {
+      margin-bottom: 6px;
+      color: var(--earth);
+      font-size: .78rem;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .org-name {
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .org-note {
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: .85rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    .site-footer {
+      padding: 60px 0 28px;
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 34px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+
+    .footer-logo {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 9px;
+      color: var(--earth);
+    }
+
+    .footer-logo::after {
+      content: "A";
+      font-size: .9rem;
+      font-weight: 900;
+    }
+
+    .footer-copy {
+      max-width: 430px;
+      color: rgba(255,255,255,.58);
+      font-size: .9rem;
+    }
+
+    .footer-title {
+      margin-bottom: 14px;
+      font-size: .92rem;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.62);
+      font-size: .88rem;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .social-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .social-chip {
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.72);
+      font-size: .78rem;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.48);
+      font-size: .8rem;
+    }
+
+    /* =========================
+       SCROLL REVEAL (ANTI-BENTROK)
+    ========================== */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(30px);
+      /* !important mencegah tertimpa oleh properti transition global */
+      transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       DARK MODE OVERRIDES
+    ========================== */
+    [data-theme="dark"] .visi-card,
+    [data-theme="dark"] .misi-card,
+    [data-theme="dark"] .org-card-simple {
+      background: #2a1f16;
+    }
+
+    [data-theme="dark"] .img-placeholder,
+    [data-theme="dark"] .logo-large-placeholder,
+    [data-theme="dark"] .filo-icon-placeholder {
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width: 900px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        height: calc(100vh - var(--header-height));
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 30px 6%;
+        overflow-y: auto;
+        background: rgba(23,17,12,.97);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition: opacity var(--transition), transform var(--transition);
+      }
+
+      .nav-menu.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        display: flex;
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        font-size: 1.05rem;
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .img-placeholder {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 24px 0;
+      }
+
+      .filosofi-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .logo-large-placeholder {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .misi-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .aksi-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 76px 0;
+      }
+
+      .page-hero {
+        min-height: auto;
+        padding-top: 130px;
+        padding-bottom: 60px;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+      }
+
+      .visi-card {
+        padding: 28px;
+      }
+
+      .misi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .navbar {
+        gap: 12px;
+      }
+
+      .brand {
+        font-size: 1rem;
+      }
+
+      .brand-logo {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="brand" href="index.html" aria-label="AKSANG GD'25 Beranda">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-text">AKSANG GD<span class="brand-accent">'25</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="index.html">Beranda</a></li>
+        <li><a class="nav-link active" href="tentang.html" aria-current="page">Tentang Kami</a></li>
+        <li><a class="nav-link" href="hasil.html">Hasil &amp; Peta</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti ke mode gelap">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content reveal-item">
+          <div class="hero-badge">AKSANG GD'25</div>
+          <h1>Tentang Gerakan Kami</h1>
+          <p>Mengenal latar belakang, arah gerak, visi, misi, dan struktur Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025 dalam mengangkat isu penurunan tanah di Cekungan Bandung.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         LATAR BELAKANG & RUMUSAN MASALAH
+    ========================== -->
+    <section class="section background-section">
+      <div class="crack-overlay" aria-hidden="true">
+        <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+          <path d="M50 60 L180 180 L140 290 L270 360 L220 500 L350 570 L300 750" stroke="var(--crack)" stroke-width="2" fill="none"/>
+          <path d="M1150 50 L1020 170 L1060 280 L930 350 L980 490 L850 570 L900 750" stroke="var(--crack)" stroke-width="2" fill="none"/>
+          <path d="M560 850 L620 740 L590 650 L680 560 L650 460" stroke="var(--crack)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="background-content reveal-item">
+          <span class="eyebrow">Latar Belakang</span>
+          <h2>Memahami Penurunan Tanah di Cekungan Bandung</h2>
+          
+          <div class="text-wrapper">
+            <!-- Gambar Mengapung di Kanan -->
+            <div class="img-placeholder" aria-label="Area penempatan foto lanskap 4:3">
+              Placeholder Foto 4:3
+            </div>
+
+            <!-- Teks akan mengalir di samping kiri gambar, dan otomatis turun ke bawah penuh jika melebihi tinggi gambar -->
+            <p>Penurunan tanah atau <i>land subsidence</i> merupakan fenomena deformasi permukaan bumi yang dapat berlangsung secara bertahap maupun tidak seragam. Fenomena ini dipengaruhi oleh berbagai faktor, termasuk kondisi geologi, konsolidasi lapisan sedimen alami, hingga aktivitas ekstraksi air tanah dalam skala masif.</p>
+            <p>Cekungan Bandung, sebagai salah satu wilayah dengan tingkat urbanisasi dan kepadatan penduduk yang sangat tinggi, menghadapi tantangan besar terkait dinamika permukaan tanah ini. Pertumbuhan infrastruktur yang pesat secara tidak langsung memberikan pembebanan ekstra pada area yang terindikasi rawan.</p>
+            <p>Dampak spasial yang dihasilkan pun beragam. Perbedaan laju amblesan pada titik-titik lokasi yang berbeda berdampak langsung terhadap kerusakan bangunan, terganggunya sistem drainase wilayah, serta meningkatnya kerentanan akan bahaya banjir genangan (rob) di musim penghujan.</p>
+            <p>Pemahaman terhadap fenomena tersebut membutuhkan informasi yang mampu menggambarkan dimensi spasial dan temporal. Pendekatan keilmuan geodesi dan geomatika menyediakan metode pengamatan, pemetaan, serta visualisasi yang komprehensif untuk membantu publik mengerti skala dan letak penyebaran fenomena ini.</p>
+            
+            <div class="problem-box">
+              <h3>Rumusan Masalah</h3>
+              <p>Bagaimana informasi mengenai penurunan tanah di Cekungan Bandung dapat dikaji, dipetakan, dan dikomunikasikan secara objektif sehingga dapat mendukung peningkatan pemahaman dan kesiapsiagaan masyarakat terhadap ancaman spasial tersebut?</p>
+            </div>
+
+            <!-- Clear float agar layout bawahnya aman -->
+            <div style="clear:both;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         TENTANG AKSI ANGKATAN
+    ========================== -->
+    <section class="section aksi-section">
+      <!-- Watermark Placeholder Logo 1:1 -->
+      <div class="aksi-watermark" aria-label="Area penempatan Logo 1:1 Watermark">
+        Logo 1:1
+      </div>
+
+      <div class="container">
+        <div class="aksi-grid reveal-item">
+          <div>
+            <span class="eyebrow aksi-label">Tentang Aksi Angkatan</span>
+            <h2>Bergerak melalui perspektif Geodesi &amp; Geomatika.</h2>
+          </div>
+          <div class="aksi-copy">
+            <p>Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025 merupakan wadah kolaborasi yang mengangkat isu penurunan tanah melalui pendekatan keilmuan dan pengabdian masyarakat. Gerakan ini bertekad menjadikan data geospasial yang kompleks sebagai landasan aksi nyata.</p>
+            <p>Kami hadir untuk mengomunikasikan pengetahuan akademik ke dalam bentuk pencerdasan publik yang inklusif. Pendekatan keruangan dari keilmuan kami dimanfaatkan secara optimal untuk menyusun informasi spasial demi Cekungan Bandung yang lebih tangguh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         FILOSOFI LOGO
+    ========================== -->
+    <section class="section filosofi-section">
+      <div class="container">
+        <div class="section-heading reveal-item">
+          <span class="eyebrow">Identitas Gerakan</span>
+          <h2>Filosofi Logo</h2>
+          <p>Makna dan nilai yang terkandung di balik identitas visual AKSANG GD'25.</p>
+        </div>
+
+        <div class="filosofi-grid reveal-item">
+          <!-- Placeholder Logo Utama Besar -->
+          <div class="logo-large-placeholder" aria-label="Area penempatan logo utama">
+            Placeholder Logo Utama
+          </div>
+
+          <div class="filosofi-list">
+            <!-- Elemen Filosofi 1 -->
+            <div class="filo-item">
+              <div class="filo-icon-placeholder" aria-label="Area penempatan ikon elemen logo">Ikon 1</div>
+              <div class="filo-text">
+                <h4>Simbol Dinamika Elevasi</h4>
+                <p>Elemen garis bertingkat merepresentasikan topografi dan pergerakan vertikal permukaan tanah. Menggambarkan fokus utama kajian pada fenomena <i>land subsidence</i> secara terukur dan observatif.</p>
+              </div>
+            </div>
+
+            <!-- Elemen Filosofi 2 -->
+            <div class="filo-item">
+              <div class="filo-icon-placeholder" aria-label="Area penempatan ikon elemen logo">Ikon 2</div>
+              <div class="filo-text">
+                <h4>Bentuk Lingkaran Sinergi</h4>
+                <p>Menggambarkan Cekungan Bandung sekaligus merepresentasikan kesatuan dan kolaborasi lintas entitas yang solid dari seluruh mahasiswa angkatan Teknik Geodesi dan Geomatika ITB 2025.</p>
+              </div>
+            </div>
+
+            <!-- Elemen Filosofi 3 -->
+            <div class="filo-item">
+              <div class="filo-icon-placeholder" aria-label="Area penempatan ikon elemen logo">Ikon 3</div>
+              <div class="filo-text">
+                <h4>Warna Terakota &amp; Bumi</h4>
+                <p>Pemilihan palet warna membumi (Earth tones) mencerminkan pijakan pada realitas kebumian, serta melambangkan semangat kepedulian yang hangat terhadap lingkungan terdampak.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         VISI & MISI
+    ========================== -->
+    <section class="section visi-misi-section">
+      <div class="container">
+        <div class="section-heading reveal-item">
+          <span class="eyebrow">Arah Gerak</span>
+          <h2>Visi &amp; Misi</h2>
+          <p>Landasan yang menjadi arah dalam pelaksanaan Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025.</p>
+        </div>
+
+        <div class="visi-misi-wrapper">
+          <!-- VISI (Atas) -->
+          <article class="visi-card reveal-item">
+            <span class="card-label">Visi</span>
+            <h3>Membangun Kesadaran Geospasial</h3>
+            <p>Menjadi gerakan mahasiswa yang mampu menghubungkan keilmuan Geodesi dan Geomatika dengan pencerdasan masyarakat mengenai isu penurunan tanah, sehingga informasi spasial dapat dipahami sebagai instrumen membangun ketahanan terhadap dinamika lingkungan.</p>
+          </article>
+
+          <!-- MISI (Bawah) -->
+          <div class="misi-grid">
+            <article class="misi-card reveal-item">
+              <div class="misi-number">01</div>
+              <h4>Mengkaji</h4>
+              <p>Mengembangkan kajian ilmiah berbasis data spasial dan observasi kewilayahan untuk memahami tingkat kerawanan penurunan tanah secara komprehensif dan terukur.</p>
+            </article>
+
+            <article class="misi-card reveal-item">
+              <div class="misi-number">02</div>
+              <h4>Mencerdaskan</h4>
+              <p>Menerjemahkan bahasa teknis pemetaan ke dalam wujud visualisasi dan media informasi yang inklusif agar mudah dicerna oleh masyarakat umum di Cekungan Bandung.</p>
+            </article>
+
+            <article class="misi-card reveal-item">
+              <div class="misi-number">03</div>
+              <h4>Menggerakkan</h4>
+              <p>Menginisiasi kolaborasi aksi nyata dari tingkat mahasiswa hingga komunitas guna menumbuhkan kemandirian adaptasi pada daerah rawan bencana penurunan muka tanah.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         ORGANOGRAM (GRID SEDERHANA)
+    ========================== -->
+    <section class="section organogram-section">
+      <div class="container">
+        <div class="section-heading reveal-item">
+          <span class="eyebrow">Struktur Organisasi</span>
+          <h2>Organogram</h2>
+          <p>Struktur kepengurusan Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025.</p>
+        </div>
+
+        <div class="org-wrapper-simple reveal-item">
+          
+          <!-- TIER 1: Ketua -->
+          <div class="org-group-grid">
+            <div class="org-card-simple tier-1">
+              <div class="org-position">Ketua</div>
+              <div class="org-name">John Doe</div>
+            </div>
+          </div>
+
+          <!-- TIER 2: Kesekjenan -->
+          <div class="org-group-grid">
+            <div class="org-card-simple tier-2">
+              <div class="org-position">Kesekjenan</div>
+              <div class="org-name">John Doe</div>
+            </div>
+          </div>
+
+          <!-- TIER 3: Divisi dibawah Kesekjenan -->
+          <div class="org-group-grid">
+            <div class="org-card-simple">
+              <div class="org-position">Sekretaris Umum</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bendahara Umum</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Divisi Perizinan</div>
+              <div class="org-name">John Doe</div>
+            </div>
+          </div>
+
+          <!-- TIER 4: Bidang Utama -->
+          <div class="org-group-grid">
+            <div class="org-card-simple">
+              <div class="org-position">Bidang MSDM</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang Acara</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang Fundraising</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang Operasional</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang Humas</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang Kreatif</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Koordinator Lapangan</div>
+              <div class="org-name">John Doe</div>
+            </div>
+            <div class="org-card-simple">
+              <div class="org-position">Bidang IT</div>
+              <div class="org-name">John Doe</div>
+            </div>
+          </div>
+
+          <p class="org-note">Struktur di atas merupakan template. Nama dan pembagian bidang dapat disesuaikan kembali.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="footer-logo" aria-hidden="true"></span>
+            <span>AKSANG GD<span class="brand-accent">'25</span></span>
+          </div>
+          <p class="footer-copy">
+            Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025.
+            Sebuah gerakan yang mengangkat isu penurunan tanah melalui
+            perspektif Geodesi dan Geomatika.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navigasi</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="hasil.html">Hasil &amp; Peta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Social Media</h3>
+          <div class="social-chips">
+            <span class="social-chip">Instagram</span>
+            <span class="social-chip">YouTube</span>
+            <span class="social-chip">TikTok</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 AKSANG GD'25 - Teknik Geodesi dan Geomatika ITB
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    "use strict";
+
+    /* =========================
+       THEME TOGGLE
+    ========================== */
+    const themeToggle = document.getElementById("themeToggle");
+    const rootHtml = document.documentElement;
+    const THEME_KEY = "aksang-theme";
+
+    function applyTheme(theme) {
+      if (theme === "dark") {
+        rootHtml.setAttribute("data-theme", "dark");
+        themeToggle.setAttribute("aria-label", "Ganti ke mode terang");
+      } else {
+        rootHtml.removeAttribute("data-theme");
+        themeToggle.setAttribute("aria-label", "Ganti ke mode gelap");
+      }
+    }
+
+    function getPreferredTheme() {
+      try {
+        const saved = localStorage.getItem(THEME_KEY);
+        if (saved === "dark" || saved === "light") {
+          return saved;
+        }
+      } catch (error) {}
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    applyTheme(getPreferredTheme());
+
+    themeToggle.addEventListener("click", () => {
+      const isDark = rootHtml.getAttribute("data-theme") === "dark";
+      const nextTheme = isDark ? "light" : "dark";
+      applyTheme(nextTheme);
+      try {
+        localStorage.setItem(THEME_KEY, nextTheme);
+      } catch (error) {}
+    });
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function setMenuState(isOpen) {
+      menuToggle.classList.toggle("active", isOpen);
+      navMenu.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu navigasi" : "Buka menu navigasi");
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.contains("active");
+      setMenuState(!isOpen);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => setMenuState(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) setMenuState(false);
+    });
+
+    /* =========================
+       SCROLL REVEAL (ANTI-BENTROK)
+    ========================== */
+    document.addEventListener("DOMContentLoaded", () => {
+      const revealElements = document.querySelectorAll(".reveal-item");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+        );
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+      } else {
+        // Fallback untuk browser lawas
+        revealElements.forEach((element) => element.classList.add("is-visible"));
+      }
+    });
+
+    /* =========================
+       ESCAPE KEY (MENU CLOSE)
+    ========================== */
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navMenu.classList.contains("active")) {
+        setMenuState(false);
+        menuToggle.focus();
+      }
+    });
+  </script>
+
+</body>
+</html>
