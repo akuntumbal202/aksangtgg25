@@ -185,14 +185,15 @@
         function pop_gadm41_IDNADM_ADM_4_2(feature, layer) {
             layer.bindPopup('Memuat...');
             layer.on('click', function (e) {
-                var point = L.CRS.EPSG3857.project(e.latlng);
+                var lat = e.latlng.lat.toFixed(7);
+                var lng = e.latlng.lng.toFixed(7);
                 var desaName = feature.properties['NAME_4'] ? feature.properties['NAME_4'] : 'Tidak diketahui';
                 var popupContent = '<div style="font-family: Arial, sans-serif; min-width: 160px;">' +
                     '<h4 style="margin: 0 0 8px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; color: #333; font-size: 15px; font-weight: bold;">Desa ' + desaName + '</h4>' +
                     '<p style="margin: 0; font-size: 13px; line-height: 1.6; color: #555;">' +
-                    '<strong>X:</strong> ' + point.x.toFixed(2) + '<br>' +
-                    '<strong>Y:</strong> ' + point.y.toFixed(2) + '<br>' +
-                    '<span style="font-size: 11px; color: #999;">(EPSG: 3857)</span>' +
+                    '<strong>Lat:</strong> ' + lat + '<br>' +
+                    '<strong>Lon:</strong> ' + lng + '<br>' +
+                    '<span style="font-size: 11px; color: #999;">(EPSG: 4326)</span>' +
                     '</p></div>';
                 layer.setPopupContent(popupContent);
             });
