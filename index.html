@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description"
+    content="RAKSHABENA 26 — Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2026. Pencerdasan mitigasi penurunan tanah di Baleendah.">
+  <title>RAKSHABENA 26 | Mitigasi Penurunan Tanah Baleendah</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER & NAVIGATION
+  ========================== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="RAKSHABENA 26 Beranda">
+        <img src="logo itb.png" alt="Logo ITB" style="height: 32px; width: auto; object-fit: contain;">
+        <span style="width: 1px; height: 24px; background-color: currentColor; opacity: 0.4;"></span>
+        <span class="brand-logo" role="img" aria-label="Logo RAKSHABENA 26"></span>
+        <span class="brand-text">RAKSHABENA 26</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" href="#beranda">Beranda</a></li>
+
+        <li class="nav-item-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-expanded="false"
+            aria-controls="dropdown-gerak">
+            Tentang Gerakan
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="nav-dropdown" id="dropdown-gerak">
+            <span class="nav-dropdown-eyebrow">Mengenal Gerakan</span>
+            <a class="nav-dropdown-link" href="#latar-belakang">Latar Belakang</a>
+            <a class="nav-dropdown-link" href="#tema-kegiatan">Tema &amp; Nilai Kegiatan</a>
+          </div>
+        </li>
+
+        <li class="nav-item-dropdown">
+          <button class="nav-link nav-dropdown-trigger" type="button" aria-expanded="false"
+            aria-controls="dropdown-kajian">
+            Kajian &amp; Peta
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="nav-dropdown" id="dropdown-kajian">
+            <span class="nav-dropdown-eyebrow">Data &amp; Riset</span>
+            <a class="nav-dropdown-link" href="#geodesi">Perspektif Geodesi</a>
+            <a class="nav-dropdown-link" href="#webgis">WebGIS</a>
+          </div>
+        </li>
+
+        <li><a class="nav-link" href="#timeline">Rangkaian Acara</a></li>
+        <li><a class="nav-link" href="#organogram-arah-gerak">Organogram &amp; Arah Gerak</a></li>
+        <li><a class="nav-link" href="#galeri">Galeri</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false"
+          aria-controls="navMenu">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-view is-active" id="view-home" data-view="home" aria-hidden="false">
+
+
+      <!-- =========================
+         HERO
+    ========================== -->
+      <section class="hero" id="beranda">
+        <div class="hero-logo-watermark" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero-content hidden">
+            <div class="hero-badge">
+              Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025
+            </div>
+
+            <h1>Pencerdasan Mitigasi Penurunan Tanah dan Longsor di Baleendah</h1>
+
+            <p class="hero-description">
+              Gerakan membangun kesadaran dan kesiapsiagaan masyarakat. Karena setiap tindakan, sekecil apa pun, akan
+              berdampak besar bagi keselamatan kita bersama
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#webgis">
+                Jelajahi Peta Penurunan Tanah
+              </a>
+              <a class="btn btn-secondary" href="#organogram-arah-gerak">
+                Organogram dan Arah Gerak
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         LATAR BELAKANG
+    ========================== -->
+      <section class="section background-section" id="latar-belakang" style="position: relative; overflow: hidden;">
+        <div class="crack-overlay" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+            <path d="M60 40 L180 160 L150 260 L260 320 L230 430 L340 480 L310 600" stroke="var(--crack)"
+              stroke-width="2" />
+            <path d="M180 160 L120 220 L90 300" stroke="var(--crack)" stroke-width="1.2" />
+            <path d="M260 320 L200 360" stroke="var(--crack)" stroke-width="1" />
+            <path d="M1100 60 L980 150 L1010 250 L900 320 L930 420 L800 470 L830 590" stroke="var(--crack)"
+              stroke-width="2" />
+            <path d="M980 150 L1040 210" stroke="var(--crack)" stroke-width="1" />
+            <path d="M900 320 L960 350" stroke="var(--crack)" stroke-width="1" />
+            <path d="M600 700 L680 620 L650 540 L740 480 L710 400" stroke="var(--crack)" stroke-width="1.5" />
+            <path d="M680 620 L740 660" stroke="var(--crack)" stroke-width="1" />
+          </svg>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+
+          <div class="background-grid hidden">
+            <div class="background-copy">
+              <span class="eyebrow">Konteks &amp; Arah Gerak</span>
+
+              <h2>Latar Belakang</h2>
+
+              <p class="body-copy">
+                Cekungan Bandung menghadapi salah satu persoalan lingkungan yang kerap luput dari perhatian: penurunan
+                muka tanah (land subsidence). Fenomena ini bukan sekadar perubahan permukaan tanah secara alami, tetapi
+                ancaman yang berlangsung perlahan dan dapat memberikan dampak besar terhadap kehidupan masyarakat.
+              </p>
+
+              <p class="body-copy">
+                Beberapa wilayah di Cekungan Bandung mengalami penurunan muka tanah dengan laju rata-rata sekitar 8 cm
+                per tahun, bahkan ada yang mencapai 23 cm per tahun. Jika terus berlangsung, penurunan muka tanah dapat
+                meningkatkan kerentanan wilayah terhadap berbagai permasalahan lingkungan, bencana lain, serta kerugian
+                ekonomi.
+              </p>
+
+              <p class="body-copy">
+                <i>Land subsidence</i> perlu dipandang sebagai <i>silent disaster</i>, yaitu ancaman yang berkembang
+                secara perlahan tetapi berpotensi memberikan dampak jangka panjang terhadap keberlanjutan dan
+                keselamatan masyarakat Cekungan Bandung.
+              </p>
+
+              <p class="body-copy">
+                Karena itu, Teknik Geodesi dan Geomatika ITB ’25 hadir melalui aksi angkatan <b>RAKSHABENA '26</b>
+                sebagai bentuk
+                kepedulian dan kontribusi dalam meningkatkan pemahaman masyarakat terhadap isu penurunan muka tanah.
+                Melalui kegiatan ini, kami berupaya menghubungkan keilmuan geodesi dan geomatika dengan kebutuhan
+                masyarakat, sekaligus mewujudkan peran mahasiswa dalam Tridharma Perguruan Tinggi.
+              </p>
+            </div>
+
+            <div>
+              <div class="illustration-box" aria-label="Ilustrasi Latar Belakang">
+                <img src="illust_latbel.jpeg" alt="Ilustrasi Penurunan Tanah di Baleendah"
+                  style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              </div>
+              <p
+                style="margin-top: 12px; font-size: 0.8rem; color: var(--text-primary); opacity: 0.55; text-align: left; line-height: 1.4;">
+                Bangunan rusak akibat penurunan muka tanah di Desa Cibedug, Kabupaten Bandung Barat, Jawa Barat,
+                Indonesia, pada 4 Maret 2024. (Foto: Xinhua)
+              </p>
+            </div>
+          </div>
+
+          <div class="vision-grid">
+            <article class="glass-card hidden">
+              <div class="card-icon" aria-hidden="true">01</div>
+              <h3>Pendidikan dan Pengajaran</h3>
+              <p class="body-copy">
+                Mempelajari dan mendalami fenomena <i>land subsidence</i> dan tanah longsor secara keilmuan geodesi dan
+                geomatika.
+              </p>
+            </article>
+
+            <article class="glass-card hidden">
+              <div class="card-icon" aria-hidden="true">02</div>
+              <h3>Penelitian dan Pengembangan</h3>
+              <p class="body-copy">
+                Memanfaatkan keilmuan geodesi dan geomatika untuk memetakan wilayah rawan serta mengidentifikasi potensi
+                bahaya sebagai dasar mitigasi.
+              </p>
+            </article>
+
+            <article class="glass-card hidden">
+              <div class="card-icon" aria-hidden="true">03</div>
+              <h3>Pengabdian kepada Masyarakat</h3>
+              <p class="body-copy">
+                Mengubah pengetahuan menjadi aksi nyata melalui pemetaan, edukasi, dan pemberdayaan masyarakat demi
+                menciptakan lingkungan yang lebih aman dan tangguh.
+              </p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================
+         TEMA & NILAI KEGIATAN
+    ========================== -->
+      <section class="section tema-section" id="tema-kegiatan">
+        <div class="section-decor" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60" />
+            <path d="M0 140 Q150 100 300 140 T600 140 T900 140 T1200 140" />
+            <path d="M0 220 Q150 180 300 220 T600 220 T900 220 T1200 220" />
+            <path d="M0 300 Q150 260 300 300 T600 300 T900 300 T1200 300" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-heading hidden">
+            <span class="eyebrow">Tema Kegiatan</span>
+            <h2>Tema &amp; Nilai Kegiatan</h2>
+          </div>
+
+          <div class="tema-intro hidden">
+            <p class="body-copy">
+              Aksi Angkatan ini bertemakan <i>The Butterfly Effect: Setiap Tindakan Akan Berdampak</i> dengan nama acara
+              yaitu <strong>Rakshabena</strong>. Melalui tema ini, Aksi Angkatan diarahkan agar setiap individu, dengan
+              berbekal keilmuan geodesi, dapat mengambil peran sebagai pelopor mitigasi, serta membangun kesadaran bahwa
+              tindakan sekecil apa pun akan memicu dampak besar bagi keselamatan dan kebaikan bersama.
+            </p>
+          </div>
+
+          <div class="tema-grid hidden">
+            <article class="tema-card">
+              <div class="card-icon" aria-hidden="true">01</div>
+              <p>
+                Meningkatkan pengetahuan siswa sekolah dan masyarakat di area kajian mengenai fenomena <i>land
+                  subsidence</i> dan perannya dengan potensi bencana longsor.
+              </p>
+            </article>
+
+            <article class="tema-card">
+              <div class="card-icon" aria-hidden="true">02</div>
+              <p>
+                Menumbuhkan kesadaran siswa sekolah dan masyarakat di area kajian terhadap risiko <i>land subsidence</i>
+                dan longsor melalui kampanye edukatif.
+              </p>
+            </article>
+
+            <article class="tema-card">
+              <div class="card-icon" aria-hidden="true">03</div>
+              <p>
+                Meningkatkan kesiapsiagaan masyarakat terhadap potensi longsor melalui pemasangan tanda peringatan di
+                area-area rawan longsor.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         EVENT TIMELINE
+    ========================== -->
+      <section class="section timeline-section" id="timeline">
+        <div class="section-decor" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60" />
+            <path d="M0 140 Q150 100 300 140 T600 140 T900 140 T1200 140" />
+            <path d="M0 220 Q150 180 300 220 T600 220 T900 220 T1200 220" />
+            <path d="M0 300 Q150 260 300 300 T600 300 T900 300 T1200 300" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-heading hidden">
+            <span class="eyebrow">Rangkaian Acara</span>
+            <h2>Gerak Bersama untuk Mitigasi</h2>
+            <p>
+              Aksi angkatan akan dilaksankan pada tanggal 28-29 Agustus 2026, mencakup beberapa kegiatan seperti di
+              bawah
+              ini
+            </p>
+          </div>
+
+          <div class="timeline">
+
+            <article class="timeline-item hidden">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <h3>
+                  KEPAK (Kegiatan Pencerdasan Aksi Kelas) - 28 Agustus 2026
+                </h3>
+                <p>
+                  Kegiatan KEPAK berfokus pada sesi pemaparan materi yang informatif dan komprehensif untuk memperluas
+                  wawasan siswa sekolah di area kajian.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item hidden">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <h3>
+                  KIMPUL (Kupas Isu Mitigasi Punya Langkah) - 28 Agustus 2026
+                </h3>
+                <p>
+                  Sesi KIMPUL menghadirkan pemaparan visualisasi peta, titik area beresiko longsor, lengkap dengan sesi
+                  tanya jawab (QnA) interaktif.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item hidden">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <h3>
+                  REAKSI (Remaja Tanggap Aksi Mitigasi Banjir) - 28 Agustus 2026
+                </h3>
+                <p>
+                  Program REAKSI mengajak peserta untuk aktif dan bergembira melalui tiga sesi permainan (Games) yang
+                  seru dan membangun kekompakan.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item hidden">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <h3>
+                  GEMPA (Gerakan Edukasi Mitigasi dan Peduli Aksi) - 29 Agustus 2026
+                </h3>
+                <p>
+                  Merupakan kegiatan pemaparan materi guna mengedukasi masyarakat umum secara langsung.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item hidden">
+              <span class="timeline-node" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <h3>
+                  GEMPITA (Gerakan Mitigasi Peduli Tanah) - 29 Agustus 2026
+                </h3>
+                <p>
+                  Rangkaian acara GEMPITA berisi pemaparan materi, sesi QnA, simulasi evakuasi, bagi masyarakat di area
+                  kajian.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         PERSPEKTIF GEODESI & GEOMATIKA
+    ========================== -->
+      <section class="section geodesi-section" id="geodesi">
+        <div class="crack-overlay" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+            <path d="M100 700 L220 600 L190 500 L300 440 L270 340 L380 300 L350 180" stroke="var(--crack)"
+              stroke-width="2" />
+            <path d="M220 600 L160 560" stroke="var(--crack)" stroke-width="1" />
+            <path d="M300 440 L240 470" stroke="var(--crack)" stroke-width="1" />
+            <path d="M1150 720 L1020 640 L1050 540 L930 480 L960 380 L850 340" stroke="var(--crack)" stroke-width="2" />
+            <path d="M1020 640 L1080 670" stroke="var(--crack)" stroke-width="1" />
+            <path d="M930 480 L870 460" stroke="var(--crack)" stroke-width="1" />
+          </svg>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+          <div class="section-heading hidden">
+            <span class="eyebrow">Kajian Keilmuan</span>
+            <h2>Perspektif Geodesi &amp; Geomatika</h2>
+            <p>
+              Geodesi berperan penting dalam fenomena ini untuk terus memantau pergerakan tanah yang terjadi, sehingga
+              dapat diambil langkah mitigasi yang tepat
+            </p>
+          </div>
+
+          <div class="geodesi-content hidden">
+            <div class="geodesi-panel">
+              <h3>Mengukur yang Tak Terlihat</h3>
+              <p>
+                Teknik Geodesi dan Geomatika berperan dalam memantau penurunan muka tanah melalui berbagai teknologi
+                geospasial. Survei GNSS/GPS digunakan untuk mengukur perubahan posisi vertikal titik pantau secara
+                berkala, sementara InSAR memanfaatkan citra radar satelit untuk mendeteksi deformasi permukaan tanah
+                dalam cakupan wilayah yang luas.
+              </p>
+              <p>
+                Kedua metode tersebut dapat diintegrasikan untuk menghasilkan informasi pergerakan tanah yang lebih
+                akurat dan menyeluruh. Selanjutnya, Sistem Informasi Geografis (SIG) digunakan untuk mengolah dan
+                menganalisis informasi spasial, termasuk pemetaan risiko, identifikasi wilayah terdampak, serta
+                mendukung upaya mitigasi dan penanggulangan bencana.
+              </p>
+
+              <div class="geodesi-stats">
+                <div class="geodesi-stat">
+                  <strong>Seberapa Dalam?</strong>
+                  <span style="font-size: 0.85rem; text-transform: none;">mengukur besarnya perubahan ketinggian
+                    permukaan tanah.</span>
+                </div>
+                <div class="geodesi-stat">
+                  <strong>Di Mana Terjadi?</strong>
+                  <span style="font-size: 0.85rem; text-transform: none;">menelusuri persebaran dan pola penurunan di
+                    suatu wilayah.</span>
+                </div>
+                <div class="geodesi-stat">
+                  <strong>Apa Dampaknya?</strong>
+                  <span style="font-size: 0.85rem; text-transform: none;">memperkirakan dampak untuk perencanaan
+                    mitigasi yang lebih baik.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="geodesi-panel">
+              <h3>Studi Kasus: Bandung Raya</h3>
+              <p>
+                Cekungan Bandung, khususnya kawasan Bandung Selatan, merupakan salah satu wilayah yang mengalami
+                penurunan muka tanah dengan intensitas yang beragam. Hasil pengukuran GNSS pada periode 2016–2023
+                menunjukkan laju penurunan sekitar 1,4–13 cm per tahun, sementara pengukuran InSAR mencatat laju sekitar
+                0,6–12 cm per tahun. Kondisi ini tidak terlepas dari karakteristik geologi Cekungan Bandung yang
+                didominasi endapan aluvium dan lempung lunak, sehingga permukaan tanah relatif mudah mengalami kompresi.
+              </p>
+              <p>
+                Fenomena tersebut juga dipengaruhi oleh aktivitas manusia, terutama pengambilan air tanah, perkembangan
+                kawasan perkotaan, pembangunan, dan perubahan tutupan lahan. Secara historis, beberapa wilayah seperti
+                Cimahi, Dayeuhkolot, dan Rancaekek bahkan tercatat mengalami penurunan hingga sekitar 12–24 cm per
+                tahun. Kondisi ini menunjukkan bahwa penurunan muka tanah bukan fenomena yang seragam, melainkan
+                memiliki pola dan tingkat intensitas berbeda di setiap wilayah, sehingga pemantauan berkelanjutan
+                menjadi penting untuk mendukung mitigasi dan perencanaan wilayah.
+              </p>
+              <p>
+                Selain menjadi persoalan tersendiri, fenomena penurunan muka tanah juga dapat menjadi salah satu faktor
+                yang berkontribusi terhadap <b>tingkat risiko longsor</b> di suatu wilayah. Bersama dengan faktor lain
+                seperti kelerengan, tutupan lahan, curah hujan, dan kondisi litologi, perubahan dan deformasi permukaan
+                tanah dapat memengaruhi kestabilan lereng serta tingkat kerentanan suatu kawasan terhadap longsor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+         WEBGIS
+    ========================== -->
+      <section class="section webgis-section" id="webgis">
+        <div class="section-decor" aria-hidden="true">
+          <!-- (Kode SVG dekorasi biarkan saja) -->
+        </div>
+        <div class="container">
+          <div class="section-heading hidden">
+            <span class="eyebrow">Geospatial Awareness</span>
+            <h2>WebGIS Tingkat Risiko Longsor</h2>
+            <p>
+              Berikut adalah peta mengenai tingkat risiko longsor di Kecamatan Baleendah berdasarkan beberapa faktor,
+              yakni kelerengan, tutupan lahan, curah hujan, dan kondisi litologi.
+            </p>
+          </div>
+        </div>
+
+        <div class="webgis-container hidden" id="webgis-container"
+          aria-label="Interactive Map Container - WebGIS Visualizer">
+          <!-- MASUKKAN IFRAME PETA DI SINI -->
+          <iframe src="qgis2web_2026_08_24-23_48_06_578609\index.html" width="100%" height="600px"
+            style="border:none; border-radius: 12px; background-color: #fff;"></iframe>
+        </div>
+      </section>
+
+
+    </div>
+
+    <!-- =========================
+         ORGANOGRAM & ARAH GERAK
+         SINGLE-FILE VIEW
+    ========================== -->
+    <div class="page-view" id="view-organogram-arah-gerak" data-view="organogram-arah-gerak" aria-hidden="true">
+      <section class="section arah-gerak-section" id="organogram-arah-gerak">
+        <div class="section-decor" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60" />
+            <path d="M0 140 Q150 100 300 140 T600 140 T900 140 T1200 140" />
+            <path d="M0 220 Q150 180 300 220 T600 220 T900 220 T1200 220" />
+            <path d="M0 300 Q150 260 300 300 T600 300 T900 300 T1200 300" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="view-backbar">
+            <div class="back-copy">
+              <strong>RAKSHABENA 26</strong>
+              <span>Organogram &amp; Arah Gerak</span>
+            </div>
+            <a class="btn btn-secondary" href="#beranda">Kembali ke Beranda</a>
+          </div>
+
+          <div class="section-heading">
+            <span class="eyebrow">Arah Gerak</span>
+            <h2>Visi &amp; Misi Aksi Angkatan</h2>
+            <p>
+              Sebagai panduan arah gerak RAKSHABENA 26, Visi dan Misi ini disusun agar seluruh rangkaian kegiatan yang
+              dilaksanakan dapat memberikan manfaat yang nyata dan berkelanjutan bagi masyarakat.
+            </p>
+          </div>
+
+          <div class="visi-misi-grid">
+            <div class="visi-card">
+              <span class="eyebrow">Visi</span>
+              <h3>Visi Angkatan</h3>
+              <p>
+                Terwujudnya Teknik Geodesi dan Geomatika ITB 2025 sebagai kesatuan angkatan yang dapat memberi
+                kontribusi nyata melalui wadah pengabdian masyarakat berbasis keilmuan Teknik Geodesi dan Geomatika demi
+                perwujudan amanat konstitusional mahasiswa dan kesejahteraan masyarakat.
+              </p>
+            </div>
+
+            <div class="misi-list">
+              <div class="misi-card">
+                <span class="misi-number" aria-hidden="true">01</span>
+                <div>
+                  <h4>Internalisasi Tanggung Jawab</h4>
+                  <p>
+                    Menginternalisasi Tanggung Jawab Konstitusional dan Orientasi Keilmuan untuk Keberlanjutan Bangsa.
+                  </p>
+                </div>
+              </div>
+
+              <div class="misi-card">
+                <span class="misi-number" aria-hidden="true">02</span>
+                <div>
+                  <h4>Pelaksanaan Tridharma</h4>
+                  <p>
+                    Mewujudkan Pelaksanaan Tridharma Perguruan Tinggi secara Seimbang melalui Pengabdian Masyarakat.
+                  </p>
+                </div>
+              </div>
+
+              <div class="misi-card">
+                <span class="misi-number" aria-hidden="true">03</span>
+                <div>
+                  <h4>Peran Agent of Change</h4>
+                  <p>
+                    Mengorganisasi Peran Agent of Change melalui Wadah Aksi Angkatan Berbasis Keilmuan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section organogram-section" id="organogram">
+        <div class="section-decor" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60" />
+            <path d="M0 140 Q150 100 300 140 T600 140 T900 140 T1200 140" />
+            <path d="M0 220 Q150 180 300 220 T600 220 T900 220 T1200 220" />
+            <path d="M0 300 Q150 260 300 300 T600 300 T900 300 T1200 300" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Struktur Kepanitiaan</span>
+            <h2>Organogram RAKSHABENA 26</h2>
+            <p>
+              Struktur kepanitiaan ini dibentuk untuk memastikan seluruh elemen aksi angkatan berjalan dengan
+              terkoordinasi, efisien, dan efektif dalam mencapai tujuan RAKSHABENA 26.
+            </p>
+          </div>
+
+          <div class="orgchart">
+            <div class="orgchart-ketua">Ketua Pelaksana</div>
+            <div class="orgchart-trunk" aria-hidden="true"></div>
+
+            <div class="orgchart-branches compact">
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-sekjen">
+                  <span>Sekretaris Jenderal</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-sekjen">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Sekretaris Umum</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Bendahara Umum</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Ketua Divisi Perizinan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-msdm">
+                  <span>Kepala Bidang MSDM</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-msdm">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Staff MSDM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="orgchart-trunk" aria-hidden="true"></div>
+
+            <div class="orgchart-branches">
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-operasional">
+                  <span>Bidang Operasional</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-operasional">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Logistik</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Akomodasi</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Konsumsi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-acara">
+                  <span>Bidang Acara</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-acara">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Riset & Kajian</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Manajemen Acara</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-fundhum">
+                  <span>Bidang Fundraising</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-fundhum">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Sponsorship</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Entrepreneurship</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-teknis">
+                  <span>Bidang Humas</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-teknis">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Humas Internal</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Humas Eksternal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-publikasi">
+                  <span>Bidang Kreatif</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-publikasi">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Grafis</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Publikasi & Dokumentasi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-dokumentasi">
+                  <span>Koordinator Lapangan</span>
+                  <svg class="org-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="org-sub-panel" id="org-sub-dokumentasi">
+                  <div class="org-sub-connector" aria-hidden="true"></div>
+                  <div class="org-sub-grid">
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Keamanan</span>
+                    </div>
+                    <div class="org-sub-card">
+                      <span class="org-sub-role">Divisi Medik</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="org-branch">
+                <button class="org-bidang-btn" type="button" aria-expanded="false" aria-controls="org-sub-it">
+                  <span>Bidang IT</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- =========================
+         GALERI
+         SINGLE-FILE VIEW
+    ========================== -->
+    <div class="page-view" id="view-galeri" data-view="galeri" aria-hidden="true">
+      <section class="section organogram-section" id="galeri">
+        <div class="section-decor" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+            <path d="M0 60 Q150 20 300 60 T600 60 T900 60 T1200 60" />
+            <path d="M0 140 Q150 100 300 140 T600 140 T900 140 T1200 140" />
+            <path d="M0 220 Q150 180 300 220 T600 220 T900 220 T1200 220" />
+            <path d="M0 300 Q150 260 300 300 T600 300 T900 300 T1200 300" />
+          </svg>
+        </div>
+        <div class="container">
+          <div class="view-backbar">
+            <div class="back-copy">
+              <strong>RAKSHABENA 26</strong>
+              <span>Galeri &amp; Dokumentasi Kegiatan</span>
+            </div>
+            <a class="btn btn-secondary" href="#beranda">Kembali ke Beranda</a>
+          </div>
+
+          <div class="section-heading">
+            <span class="eyebrow">Dokumentasi</span>
+            <h2>Galeri Kegiatan</h2>
+          </div>
+
+          <div class="gallery-intro">
+            <p>
+              Dokumentasi dan rekap rangkaian kegiatan aksi angkatan yang dilaksanakan pada tanggal 28-29 Agustus 2026
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span class="stat-number">1500+</span>
+              <span class="stat-label">Peserta terlibat</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Lokasi Kegiatan</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">124</span>
+              <span class="stat-label">Massa TGG 25 Terlibat</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Jenis Kegiatan</span>
+            </article>
+          </div>
+
+          <h3 class="gallery-heading">Dokumentasi Kegiatan</h3>
+
+          <div class="gallery-grid">
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Lokasi 01 • Kegiatan Lapangan</span>
+              <span class="gallery-caption">Dokumentasi 01</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Lokasi 02 • Kegiatan Edukasi</span>
+              <span class="gallery-caption">Dokumentasi 02</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Lokasi 03 • Kegiatan Kolaboratif</span>
+              <span class="gallery-caption">Dokumentasi 03</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 04</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 05</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 06</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 07</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 08</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 09</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 10</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 11</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 12</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 13</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 14</span>
+            </article>
+
+            <article class="gallery-card">
+              <div class="gallery-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <circle cx="8.5" cy="9" r="1.5" />
+                  <path d="m21 15-4.5-4.5L7 20" />
+                </svg>
+              </div>
+              <span class="gallery-meta">Dokumentasi Pendukung</span>
+              <span class="gallery-caption">Dokumentasi 15</span>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">
+            <span class="footer-logo" role="img" aria-label="Logo RAKSHABENA 26"></span>
+            <span>RAKSHABENA 26</span>
+          </div>
+          <p class="footer-copy">
+            Wadah Aksi Angkatan Teknik Geodesi dan Geomatika ITB 2025 yang bertujuan memberikan kontribusi nyata dalam
+            upaya edukasi, pemetaan, dan mitigasi risiko penurunan muka tanah serta longsor di kawasan Cekungan Bandung.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navigasi</h3>
+          <ul class="footer-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#organogram-arah-gerak">Organogram &amp; Arah Gerak</a></li>
+            <li><a href="#latar-belakang">Latar Belakang</a></li>
+            <li><a href="#tema-kegiatan">Tema &amp; Nilai</a></li>
+            <li><a href="#geodesi">Perspektif Geodesi</a></li>
+            <li><a href="#timeline">Rangkaian Acara</a></li>
+            <li><a href="#webgis">WebGIS</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Kontak kami</h3>
+          <ul class="footer-links">
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="16" height="16">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>elvitafelicia: +62 81265857220</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="16" height="16">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>jazzysatriani: +62 83811045901</span>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/rakshabena_?igsi=cmxrYnRzMjVwb2E=" target="_blank"
+                rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" width="16" height="16">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram: @rakshabena_</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 RAKSHABENA 26 - Teknik Geodesi dan Geomatika ITB
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
