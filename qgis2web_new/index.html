@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
-        <link rel="stylesheet" href="css/qgis2web.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet.photon.css">
-        <style>
-        html, body, #map {
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+    <link rel="stylesheet" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/leaflet.photon.css">
+    <style>
+        html,
+        body,
+        #map {
             width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
         }
+
         .info.legend {
             background: white;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             line-height: 24px;
             color: #333;
             font-family: Arial, sans-serif;
@@ -30,12 +34,14 @@
             z-index: 1000;
             margin-bottom: 25px;
         }
+
         .info.legend h4 {
             margin: 0 0 5px;
             color: #333;
             font-size: 15px;
             font-weight: bold;
         }
+
         .info.legend i {
             width: 18px;
             height: 18px;
@@ -44,11 +50,12 @@
             opacity: 0.9;
             border: 1px solid #ccc;
         }
+
         .village-label {
             background: rgba(255, 255, 255, 0.85);
             border: 1px solid #777;
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
             color: #222;
             font-family: Arial, sans-serif;
             font-size: 11px;
@@ -56,28 +63,29 @@
             padding: 2px 4px;
             white-space: nowrap;
         }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
-        </div>
-        <script src="js/qgis2web_expressions.js"></script>
-        <script src="js/leaflet.js"></script>
-        <script src="js/L.Control.Layers.Tree.min.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="js/leaflet.photon.js"></script>
-        <script src="js/proj4.js"></script>
-        <script src="js/proj4leaflet.js"></script>
-        <script src="data/gadm41_IDNADM_ADM_4_2.js"></script>
-        <script src="data/risikolongsorbaleendahvektorADMintersection_4.js"></script>
-        <script>
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div id="map">
+    </div>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/L.Control.Layers.Tree.min.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="js/leaflet.photon.js"></script>
+    <script src="js/proj4.js"></script>
+    <script src="js/proj4leaflet.js"></script>
+    <script src="data/gadm41_IDNADM_ADM_4_2.js"></script>
+    <script src="data/risikolongsorbaleendahvektorADMintersection_4.js"></script>
+    <script>
         var crs = new L.Proj.CRS('EPSG:3857', '+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs', {
             resolutions: [2800, 1400, 700, 350, 175, 84, 42, 21, 11.2, 5.6, 2.8, 1.4, 0.7, 0.35, 0.14, 0.07],
         });
@@ -85,25 +93,25 @@
             crs: L.CRS.EPSG3857,
             preferCanvas: true,
             continuousWorld: false,
-            worldCopyJump: false, 
-            zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.061538804603978,107.56523086527427],[-6.960074013545978,107.70606175187507]]);
+            worldCopyJump: false,
+            zoomControl: false, maxZoom: 28, minZoom: 1
+        }).fitBounds([[-7.061538804603978, 107.56523086527427], [-6.960074013545978, 107.70606175187507]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var autolinker = new Autolinker({ truncate: { length: 30, location: 'smart' } });
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
-         var tempDiv = document.createElement('div');
-         tempDiv.innerHTML = content;
-         var rows = tempDiv.querySelectorAll('tr');
-         for (var i = 0; i < rows.length; i++) {
-             var td = rows[i].querySelector('td.visible-with-data');
-             var key = td ? td.id : '';
-             if (td && td.classList.contains('visible-with-data') && feature.properties[key] == null) {
-                 rows[i].parentNode.removeChild(rows[i]);
-             }
-         }
-         return tempDiv.innerHTML;
+            var tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+            var rows = tempDiv.querySelectorAll('tr');
+            for (var i = 0; i < rows.length; i++) {
+                var td = rows[i].querySelector('td.visible-with-data');
+                var key = td ? td.id : '';
+                if (td && td.classList.contains('visible-with-data') && feature.properties[key] == null) {
+                    rows[i].parentNode.removeChild(rows[i]);
+                }
+            }
+            return tempDiv.innerHTML;
         }
         // modify popup if contains media
         function addClassToPopupIfMedia(content, popup) {
@@ -120,10 +128,10 @@
                         if (img.complete && img.naturalHeight > 0) {
                             popup.update();
                         } else {
-                            img.addEventListener('load', function() {
+                            img.addEventListener('load', function () {
                                 popup.update();
                             });
-                            img.addEventListener('error', function() {
+                            img.addEventListener('error', function () {
                                 popup.update();
                             });
                         }
@@ -134,7 +142,7 @@
                     audio.src = src;
                     imgTd.parentNode.replaceChild(audio, imgTd);
                     popup._contentNode.classList.add('media');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         popup.setContent(tempDiv.innerHTML);
                         popup.update();
                     }, 10);
@@ -149,10 +157,10 @@
                     imgTd.parentNode.replaceChild(video, imgTd);
                     popup._contentNode.classList.add('media');
                     // Aggiorna il popup quando il video carica i metadati
-                    video.addEventListener('loadedmetadata', function() {
+                    video.addEventListener('loadedmetadata', function () {
                         popup.update();
                     });
-                    setTimeout(function() {
+                    setTimeout(function () {
                         popup.setContent(tempDiv.innerHTML);
                         popup.update();
                     }, 10);
@@ -185,10 +193,10 @@
         map.createPane('pane_gsatelitebaleendah_1');
         map.getPane('pane_gsatelitebaleendah_1').style.zIndex = 401;
         var img_gsatelitebaleendah_1 = 'data/gsatelitebaleendah_1.webp';
-        var img_bounds_gsatelitebaleendah_1 = [[-7.048851516655564,107.58050286844855],[-6.9756476593627905,107.6851174217223]];
+        var img_bounds_gsatelitebaleendah_1 = [[-7.048851516655564, 107.58050286844855], [-6.9756476593627905, 107.6851174217223]];
         var layer_gsatelitebaleendah_1 = new L.imageOverlay(img_gsatelitebaleendah_1,
-                                              img_bounds_gsatelitebaleendah_1,
-                                              {pane: 'pane_gsatelitebaleendah_1'});
+            img_bounds_gsatelitebaleendah_1,
+            { pane: 'pane_gsatelitebaleendah_1' });
         bounds_group.addLayer(layer_gsatelitebaleendah_1);
         map.addLayer(layer_gsatelitebaleendah_1);
         function pop_gadm41_IDNADM_ADM_4_2(feature, layer) {
@@ -240,11 +248,11 @@
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-            
+            layer.on('popupopen', function (e) {
+                addClassToPopupIfMedia(content, e.popup);
+            });
+            layer.bindPopup(content, { maxHeight: 400 });
+
             if (feature.properties['NAME_4']) {
                 layer.bindTooltip(
                     String(feature.properties['NAME_4']),
@@ -265,7 +273,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fillOpacity: 0,
                 interactive: true,
             }
@@ -286,10 +294,10 @@
         map.createPane('pane_hillslidebaleendah_3');
         map.getPane('pane_hillslidebaleendah_3').style.zIndex = 403;
         var img_hillslidebaleendah_3 = 'data/hillslidebaleendah_3.png';
-        var img_bounds_hillslidebaleendah_3 = [[-7.049352583402771,107.58047829873473],[-6.975304734798411,107.68533024648582]];
+        var img_bounds_hillslidebaleendah_3 = [[-7.049352583402771, 107.58047829873473], [-6.975304734798411, 107.68533024648582]];
         var layer_hillslidebaleendah_3 = new L.imageOverlay(img_hillslidebaleendah_3,
-                                              img_bounds_hillslidebaleendah_3,
-                                              {pane: 'pane_hillslidebaleendah_3'});
+            img_bounds_hillslidebaleendah_3,
+            { pane: 'pane_hillslidebaleendah_3' });
         bounds_group.addLayer(layer_hillslidebaleendah_3);
         map.addLayer(layer_hillslidebaleendah_3);
         var highlightedLayer;
@@ -309,7 +317,7 @@
                 var lat = e.latlng.lat.toFixed(7);
                 var lng = e.latlng.lng.toFixed(7);
                 var desaName = feature.properties['NAME_4'] ? feature.properties['NAME_4'] : 'Tidak diketahui';
-                var area = feature.properties['area m2'] ? parseFloat(feature.properties['area m2']).toLocaleString('id-ID', {maximumFractionDigits: 2}) + ' m²' : 'Tidak diketahui';
+                var area = feature.properties['area m2'] ? parseFloat(feature.properties['area m2']).toLocaleString('id-ID', { maximumFractionDigits: 2 }) + ' m²' : 'Tidak diketahui';
                 var dn = feature.properties['DN'];
                 var risk = '';
                 if (dn >= 2.0 && dn <= 3.2) risk = 'Sangat Rendah';
@@ -339,80 +347,80 @@
         }
 
         function style_risikolongsorbaleendahvektorADMintersection_4_0(feature) {
-            if (feature.properties['DN'] >= 2.000000 && feature.properties['DN'] <= 3.200000 ) {
+            if (feature.properties['DN'] >= 2.000000 && feature.properties['DN'] <= 3.200000) {
                 return {
-                pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
-                opacity: 0.5,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 0.3,
-                fillColor: 'rgba(26,150,65,1.0)',
-                interactive: true,
+                    pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
+                    opacity: 0.5,
+                    color: 'rgba(35,35,35,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 1.0,
+                    fill: true,
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(26,150,65,1.0)',
+                    interactive: true,
+                }
             }
-            }
-            if (feature.properties['DN'] >= 3.200000 && feature.properties['DN'] <= 4.400000 ) {
+            if (feature.properties['DN'] >= 3.200000 && feature.properties['DN'] <= 4.400000) {
                 return {
-                pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
-                opacity: 0.5,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 0.3,
-                fillColor: 'rgba(166,217,106,1.0)',
-                interactive: true,
+                    pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
+                    opacity: 0.5,
+                    color: 'rgba(35,35,35,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 1.0,
+                    fill: true,
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(166,217,106,1.0)',
+                    interactive: true,
+                }
             }
-            }
-            if (feature.properties['DN'] >= 4.400000 && feature.properties['DN'] <= 5.600000 ) {
+            if (feature.properties['DN'] >= 4.400000 && feature.properties['DN'] <= 5.600000) {
                 return {
-                pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
-                opacity: 0.5,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 0.3,
-                fillColor: 'rgba(255,255,192,1.0)',
-                interactive: true,
+                    pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
+                    opacity: 0.5,
+                    color: 'rgba(35,35,35,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 1.0,
+                    fill: true,
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(255,255,192,1.0)',
+                    interactive: true,
+                }
             }
-            }
-            if (feature.properties['DN'] >= 5.600000 && feature.properties['DN'] <= 6.800000 ) {
+            if (feature.properties['DN'] >= 5.600000 && feature.properties['DN'] <= 6.800000) {
                 return {
-                pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
-                opacity: 0.5,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 0.3,
-                fillColor: 'rgba(253,174,97,1.0)',
-                interactive: true,
+                    pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
+                    opacity: 0.5,
+                    color: 'rgba(35,35,35,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 1.0,
+                    fill: true,
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(253,174,97,1.0)',
+                    interactive: true,
+                }
             }
-            }
-            if (feature.properties['DN'] >= 6.800000 && feature.properties['DN'] <= 8.000000 ) {
+            if (feature.properties['DN'] >= 6.800000 && feature.properties['DN'] <= 8.000000) {
                 return {
-                pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
-                opacity: 0.5,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 0.3,
-                fillColor: 'rgba(215,25,28,1.0)',
-                interactive: true,
-            }
+                    pane: 'pane_risikolongsorbaleendahvektorADMintersection_4',
+                    opacity: 0.5,
+                    color: 'rgba(35,35,35,1.0)',
+                    dashArray: '',
+                    lineCap: 'butt',
+                    lineJoin: 'miter',
+                    weight: 1.0,
+                    fill: true,
+                    fillOpacity: 0.3,
+                    fillColor: 'rgba(215,25,28,1.0)',
+                    interactive: true,
+                }
             }
         }
         map.createPane('pane_risikolongsorbaleendahvektorADMintersection_4');
@@ -430,8 +438,10 @@
         });
         bounds_group.addLayer(layer_risikolongsorbaleendahvektorADMintersection_4);
         map.addLayer(layer_risikolongsorbaleendahvektorADMintersection_4);
-        const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
-        "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
+        const url = {
+            "Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
+            "France BAN": "https://api-adresse.data.gouv.fr/search/?"
+        }
         var photonControl = L.control.photon({
             url: url["Nominatim OSM"],
             feedbackLabel: '',
@@ -440,14 +450,14 @@
             initial: true,
             // resultsHandler: myHandler,
         }).addTo(map);
-        photonControl._container.childNodes[0].style.borderRadius="10px"
+        photonControl._container.childNodes[0].style.borderRadius = "10px"
         // Create a variable to store the geoJSON data
         var x = null;
         // Create a variable to store the marker
         var marker = null;
         // Add an event listener to the Photon control to create a marker from the returned geoJSON data
         var z = null;
-        photonControl.on('selected', function(e) {
+        photonControl.on('selected', function (e) {
             console.log(photonControl.search.resultsContainer);
             if (x != null) {
                 map.removeLayer(obj3.marker);
@@ -458,14 +468,14 @@
             var label = typeof obj2.gcd.properties.label === 'undefined' ? obj2.gcd.properties.display_name : obj2.gcd.properties.label;
             obj3.marker = L.marker(x.getLayers()[0].getLatLng()).bindPopup(label).addTo(map);
             map.setView(x.getLayers()[0].getLatLng(), 17);
-            z = typeof e.choice.properties.label === 'undefined'? e.choice.properties.display_name : e.choice.properties.label;
+            z = typeof e.choice.properties.label === 'undefined' ? e.choice.properties.display_name : e.choice.properties.label;
             console.log(e);
             e.target.input.value = z;
         });
         var search = document.getElementsByClassName("leaflet-photon leaflet-control")[0];
         search.classList.add("leaflet-control-search")
         search.style.display = "flex";
-        search.style.backgroundColor="rgba(255,255,255,0.5)" 
+        search.style.backgroundColor = "rgba(255,255,255,0.5)"
 
         // Create the new button element
         var button = document.createElement("div");
@@ -483,29 +493,58 @@
                 last.style.display = "none";
             }
         });
+
+        var resetBtn = document.createElement("div");
+        resetBtn.className = "gcd-gl-btn fa fa-times reset-button";
+        resetBtn.style.cursor = "pointer";
+        resetBtn.style.padding = "5px 10px";
+        resetBtn.title = "Clear search";
+        search.appendChild(resetBtn);
+
+        resetBtn.addEventListener("click", function (e) {
+            if (x != null) {
+                map.removeLayer(x);
+                x = null;
+            }
+            try {
+                if (obj3 && obj3.marker) {
+                    map.removeLayer(obj3.marker);
+                }
+            } catch (err) { }
+            var input = search.querySelector('input');
+            if (input) input.value = '';
+        });
+        var warningSvg = '<svg width="32" height="32" viewBox="0 0 24 24" fill="#ffcc00" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13" stroke="black" stroke-width="2"></line><line x1="12" y1="17" x2="12.01" y2="17" stroke="black" stroke-width="3"></line></svg>';
+        var warningIcon = L.divIcon({
+            className: '',
+            html: warningSvg,
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32]
+        });
+
+        var layer_tanda_bahaya = L.layerGroup([
+            L.marker([-7.02878, 107.64629], { icon: warningIcon }).bindPopup("Tanda Bahaya Longsor 1"),
+            L.marker([-7.02774, 107.64658], { icon: warningIcon }).bindPopup("Tanda Bahaya Longsor 2")
+        ]);
+
         var overlaysTree = [
-            {label: 'Tingkat Risiko Longsor<br /><table><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_SangatRendah0.png" /></td><td>Sangat Rendah</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Rendah1.png" /></td><td>Rendah</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Sedang2.png" /></td><td>Sedang</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Tinggi3.png" /></td><td>Tinggi</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_SangatTinggi4.png" /></td><td>Sangat Tinggi</td></tr></table>', layer: layer_risikolongsorbaleendahvektorADMintersection_4},
-            {label: "Topografi Relief (Hillshade)", layer: layer_hillslidebaleendah_3},
-            {label: '<img src="legend/gadm41_IDNADM_ADM_4_2.png" /> Batas Administrasi Kelurahan', layer: layer_gadm41_IDNADM_ADM_4_2},
-            {label: "Citra Google Satelit Baleendah", layer: layer_gsatelitebaleendah_1},
-            {label: "Esri Gray", layer: layer_Positron_0},]
-        var lay = L.control.layers.tree(null, overlaysTree,{
-            //namedToggle: true,
-            //selectorBack: false,
-            //closedSymbol: '&#8862; &#x1f5c0;',
-            //openedSymbol: '&#8863; &#x1f5c1;',
-            //collapseAll: 'Collapse all',
-            //expandAll: 'Expand all',
-            collapsed: false, 
+            { label: "Pemasangan Tanda Bahaya Longsor", layer: layer_tanda_bahaya },
+            { label: 'Tingkat Risiko Longsor<br /><table><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_SangatRendah0.png" /></td><td>Sangat Rendah</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Rendah1.png" /></td><td>Rendah</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Sedang2.png" /></td><td>Sedang</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_Tinggi3.png" /></td><td>Tinggi</td></tr><tr><td style="text-align: center;"><img src="legend/risikolongsorbaleendahvektorADMintersection_4_SangatTinggi4.png" /></td><td>Sangat Tinggi</td></tr></table>', layer: layer_risikolongsorbaleendahvektorADMintersection_4 },
+            { label: "Topografi 3D (Hillshade)", layer: layer_hillslidebaleendah_3 },
+            { label: '<img src="legend/gadm41_IDNADM_ADM_4_2.png" /> Batas Administrasi Kelurahan', layer: layer_gadm41_IDNADM_ADM_4_2 },
+            { label: "Citra Google Satelit Baleendah", layer: layer_gsatelitebaleendah_1 },
+            { label: "Peta Dasar (Esri Gray)", layer: layer_Positron_0 },]
+        var lay = L.control.layers.tree(null, overlaysTree, {
+            collapsed: false,
         });
         lay.addTo(map);
-		document.addEventListener("DOMContentLoaded", function() {
-            // set new Layers List height which considers toggle icon
+        document.addEventListener("DOMContentLoaded", function () {
             function newLayersListHeight() {
                 var layerScrollbarElement = document.querySelector('.leaflet-control-layers-scrollbar');
                 if (layerScrollbarElement) {
                     var layersListElement = document.querySelector('.leaflet-control-layers-list');
-                    var originalHeight = layersListElement.style.height 
+                    var originalHeight = layersListElement.style.height
                         || window.getComputedStyle(layersListElement).height;
                     var newHeight = parseFloat(originalHeight) - 50;
                     layersListElement.style.height = newHeight + 'px';
@@ -514,8 +553,7 @@
             var isLayersListExpanded = true;
             var controlLayersElement = document.querySelector('.leaflet-control-layers');
             var toggleLayerControl = document.querySelector('.leaflet-control-layers-toggle');
-            // toggle Collapsed/Expanded and apply new Layers List height
-            toggleLayerControl.addEventListener('click', function() {
+            toggleLayerControl.addEventListener('click', function () {
                 if (isLayersListExpanded) {
                     controlLayersElement.classList.remove('leaflet-control-layers-expanded');
                 } else {
@@ -523,33 +561,30 @@
                 }
                 isLayersListExpanded = !isLayersListExpanded;
                 newLayersListHeight()
-            });	
-			// apply new Layers List height if toggle layerstree
-			if (controlLayersElement) {
-				controlLayersElement.addEventListener('click', function(event) {
-					var toggleLayerHeaderPointer = event.target.closest('.leaflet-layerstree-header-pointer span');
-					if (toggleLayerHeaderPointer) {
-						newLayersListHeight();
-					}
-				});
-			}
-            // Collapsed/Expanded at Start to apply new height
-            setTimeout(function() {
+            });
+            if (controlLayersElement) {
+                controlLayersElement.addEventListener('click', function (event) {
+                    var toggleLayerHeaderPointer = event.target.closest('.leaflet-layerstree-header-pointer span');
+                    if (toggleLayerHeaderPointer) {
+                        newLayersListHeight();
+                    }
+                });
+            }
+            setTimeout(function () {
                 toggleLayerControl.click();
             }, 10);
-            setTimeout(function() {
+            setTimeout(function () {
                 toggleLayerControl.click();
             }, 10);
-            // Collapsed touch/small screen
             var isSmallScreen = window.innerWidth < 650;
             if (isSmallScreen) {
-                setTimeout(function() {
+                setTimeout(function () {
                     controlLayersElement.classList.remove('leaflet-control-layers-expanded');
                     isLayersListExpanded = !isLayersListExpanded;
                 }, 500);
-            }  
-        });       
-        var legend = L.control({position: 'bottomright'});
+            }
+        });
+        var legend = L.control({ position: 'bottomright' });
         legend.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend');
             div.innerHTML = '<h4>Risiko Longsor</h4>' +
@@ -568,6 +603,7 @@
                 return this._bounds;
             }
         });
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
